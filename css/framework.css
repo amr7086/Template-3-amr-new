@@ -1,0 +1,225 @@
+/* Start head h2 */
+.all-head-h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-transform:uppercase;
+  font-weight: bold;
+  margin: auto;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+  border: 2px solid #000;
+}
+.all-head-h2:hover {
+  animation-name: color-change;
+  animation-delay: 0.5s;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.all-head-h2::before,
+.all-head-h2::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-loge);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.all-head-h2::before {
+  left: -25px;
+}
+.all-head-h2::after {
+  right: -25px;
+}
+/* _____________________ */
+.all-head-h2:hover::before,
+.all-head-h2:hover::after { 
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+.all-head-h2:hover::before { 
+  animation-name: left-right-before;
+}
+.all-head-h2:hover::after {
+  animation-name: right-left-before;
+}
+/* Start All animation name */
+/* ____________1_______________ */
+@keyframes up-and-down {
+  to {
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+  }
+}
+/* ___________2_____________________ */
+@keyframes up-and-down-icon {
+  0% {
+    transform:translateY(-10px);
+    -webkit-transform:translateY(-10px);
+    -moz-transform:translateY(-10px);
+    -ms-transform:translateY(-10px);
+    -o-transform:translateY(-10px);
+  }
+  25% {
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+  }
+  50% {
+    transform:translateY(0px);
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    -o-transform:translateY(0px);
+  }
+  75% {
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+  }
+  100% {
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+  }
+}
+/* __________3_____________________ */
+@keyframes left-and-right {
+  to {
+    transform:translateX(7px);
+    -webkit-transform:translateX(7px);
+    -moz-transform:translateX(7px);
+    -ms-transform:translateX(7px);
+    -o-transform:translateX(7px);
+  }
+}
+/* ____________4_______________________ */
+@keyframes color-change {
+  to {
+    color: #fff;
+    border: 2px solid var(--color-loge);
+  }
+}
+/* __________5__________________________ */
+@keyframes left-right-before {
+  to {
+    left: -1px;
+    height: calc(100% + 4px);
+    width: calc(50% + 2px);
+    border-radius: initial;
+  } 
+}
+/* _____________6__________________________ */
+@keyframes right-left-before {
+  to {
+    right: -1px;
+    height: calc(100% + 4px);
+    width: calc(50% + 2px);
+    border-radius: initial;
+  }
+}
+/* ________________7___________________ */
+@keyframes img-change {
+  0%{
+    background-image: url("../images/dis5.jpeg");
+    background-size:cover;
+  }
+  25%{
+    background-image: url("../images/dis4.jpeg");
+    background-size:cover;
+  }
+  50% {
+    background-image: url("../images/dis3.jpeg");
+    background-size:cover;
+  }
+  75% {
+    background-image: url("../images/dis2.jpeg");
+    background-size:cover;
+  }
+  100% {
+    background-image: url("../images/dis1.jpeg");
+    background-size:contain;
+  }
+}
+/* ________________8___________________ */
+@keyframes img-change-po {
+  0%{
+    background-image: url("../images/serv02.png"); 
+  }
+  50%{
+    background-image: url("../images/serv0222.png"); 
+  }
+  100% {
+    background-image: url("../images/serv022.png");  
+  }
+}
+/* ________________9___________________ */
+@keyframes img-change-po-2 {
+  0%{
+    background-image: url("../images/serv03.png");
+  }
+  50%{
+    background-image: url("../images/serv033.png");
+  }
+  100% {
+    background-image: url("../images/serv0333.png");
+  }
+}
+/* ________________10___________________ */
+@keyframes img-change-po-1 {
+  0%{
+    background-image: url("../images/serv01.png");
+  }
+  50%{
+    background-image: url("../images/serv011.png");
+  }
+  100% {
+    background-image: url("../images/serv0111.png");
+  }
+}
+/* End All animation name */
+.triangles {
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #fff;
+  z-index: 1;
+}
+.triangles::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 1;
+  display: block;
+  height: 20px;
+  background-size: 20px 100%;
+  background-image: linear-gradient(135deg, #fff 25%, transparent 25%), linear-gradient(225deg, #fff 25%, transparent 25%);
+  background-position: 0 0;
+}
+.padding-box {
+  padding-top: var(--section-padding);
+  background-color: var(--color-body);
+  z-index: 0;
+  position: relative;
+}
